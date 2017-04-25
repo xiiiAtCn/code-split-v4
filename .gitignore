@@ -1,0 +1,3 @@
+# extract software configuration and node_modules
+.idea/
+node_modules/
