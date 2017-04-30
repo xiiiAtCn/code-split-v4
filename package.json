@@ -1,11 +1,12 @@
 {
-  "name": "project-structure",
+  "name": "react-router-v4",
   "version": "1.0.0",
-  "description": "It is a boilerplate of Enterprise resource planning(ERP) using UI library antd",
+  "description": "It is a demo of testing react-router v4's code spliting",
   "main": "index.js",
   "scripts": {
     "test": "echo welcome to my world!",
-    "dev": "opener http://localhost:9000/ && webpack-dev-server --config webpack/dev.js --host 0.0.0.0 --colors --progress --watch"
+    "dev": "npm run open-browser && webpack-dev-server --config webpack/dev.js --host 0.0.0.0 --hot --inline --color --progress --watch",
+    "open-browser": "opener http://localhost:9000/dist/"
   },
   "keywords": [
     "boilerplate",
@@ -27,14 +28,19 @@
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
     "html-webpack-plugin": "^2.28.0",
+    "mockjs": "^1.0.1-beta3",
     "opener": "^1.4.3",
     "style-loader": "^0.16.1",
     "url-loader": "^0.5.8",
     "webpack": "^2.4.1",
-    "webpack-dev-server": "^2.4.4"
+    "webpack-dev-server": "2.2.0"
   },
   "dependencies": {
     "antd": "^2.9.3",
+    "babel-preset-stage-1": "^6.24.1",
+    "bundle-loader": "^0.5.5",
+    "g2": "^2.3.0",
+    "g2-react": "^1.2.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-router": "^4.1.1"

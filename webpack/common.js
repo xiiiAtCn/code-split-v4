@@ -12,13 +12,11 @@ const context = path.resolve(__dirname, '../')
 
 module.exports = {
     context:context,
-    entry:() => {
-        return './entry.js'
-    },
+    entry:'./entry.js',
     output:{
         filename:'[name][hash:10].js',
         path:path.resolve(context, 'dist'),
-        publicPath:'/',
+        publicPath:'/dist/',
         chunkFilename:'[name][hash:5].js',
     },
     module: {
@@ -38,7 +36,7 @@ module.exports = {
                 use:[{
                     loader:'babel-loader',
                     options:{
-                        presets:['es2015', 'react', 'stage-3'],
+                        presets:['es2015', 'react', 'stage-1'],
                         plugins:[
                             ['import', {libraryName: "antd", style: "css"}]
                         ]
@@ -63,7 +61,6 @@ module.exports = {
     externals:{
         jquery : 'jQuery'
     },
-
     plugins:[
         new ExtractTextPlugin('main.css'),
         new HtmlWebpackPlugin({

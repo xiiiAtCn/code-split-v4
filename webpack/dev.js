@@ -3,14 +3,15 @@
  */
 let config = require('./common')
 
-module.exports = (function (config) {
+module.exports = function (config) {
     config.devtool = '#source-map'
     config.devServer = {
+        contentBase: 'http://localhost:9000',
+        publicPath: '/dist/',
         port: 9000,
         compress:true,
         historyApiFallback:true,
-        inline:true,
-        noInfo:true
+        hot:true
     }
     return config
-}(config))
+}(config)
