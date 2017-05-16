@@ -28,10 +28,10 @@ export  default class SideBar extends Component {
                 defaultOpenKeys={['sub1']}
                 mode="inline"
             >
-                <SubMenu key="sub1" title={<span><Icon type="mail" /><span>统计展示</span></span>}>
-                    <ItemGroup key="g1" title="Item 1">
-                        <Menu.Item key="/personalInfo">个人信息</Menu.Item>
-                        <Menu.Item key="/chart">降雨量统计</Menu.Item>
+                <SubMenu key="sub1" title={<span><Icon type="mail" /><span>统计信息</span></span>}>
+                    <ItemGroup key="g1" title="图表展示">
+                        <Menu.Item key="/personalInfo">表格示例</Menu.Item>
+                        <Menu.Item key="/chart">条形图示例</Menu.Item>
                     </ItemGroup>
                     <ItemGroup key="g2" title="Item 2">
                         <Menu.Item key="3">Option 3</Menu.Item>
