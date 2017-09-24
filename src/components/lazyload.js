@@ -1,8 +1,9 @@
 /**
  * Created by xiii on 2017/4/29.
  */
-import React, {Component} from 'react'
+import {Component} from 'react'
 export default class Lazyload extends Component {
+    
     constructor(props) {
         super(props)
     }

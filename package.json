@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo welcome to my world!",
     "dev": "npm run open-browser && webpack-dev-server --config webpack/dev.js --host 0.0.0.0 --hot --inline --color --progress --watch",
-    "open-browser": "opener http://localhost:9000/dist/"
+    "open-browser": "opener http://localhost:9000/dist/",
+    "lint": "eslint src/"
   },
   "keywords": [
     "boilerplate",
@@ -16,15 +17,22 @@
   "author": "xiii",
   "license": "MIT",
   "devDependencies": {
-    "babel": "^6.23.0",
     "babel-core": "^6.24.1",
+    "babel-eslint": "^8.0.0",
     "babel-loader": "^7.0.0",
     "babel-plugin-import": "^1.1.1",
-    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
-    "babel-preset-stage-3": "^6.24.1",
     "css-loader": "^0.28.0",
+    "eslint": "^4.7.2",
+    "eslint-config-google": "^0.9.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^7.3.0",
+    "eslint-plugin-standard": "^3.0.1",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
     "html-webpack-plugin": "^2.28.0",
@@ -36,13 +44,13 @@
     "webpack-dev-server": "2.2.0"
   },
   "dependencies": {
-    "antd": "^2.9.3",
+    "antd": "^2.13.3",
     "babel-preset-stage-1": "^6.24.1",
     "bundle-loader": "^0.5.5",
     "g2": "^2.3.0",
     "g2-react": "^1.2.0",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "react-router": "^4.1.1"
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-router": "^4.2.0"
   }
 }

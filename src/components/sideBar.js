@@ -15,8 +15,7 @@ export  default class SideBar extends Component {
     }
 
     linkTo = (item) => {
-        console.log(this.history)
-        this.history.push(item.key);
+        this.history.push(item.key)
     }
     render() {
         const { ItemGroup, SubMenu } = Menu
@@ -47,6 +46,6 @@ export  default class SideBar extends Component {
                     </SubMenu>
                 </SubMenu>
             </Menu>
-        );
+        )
     }
 }

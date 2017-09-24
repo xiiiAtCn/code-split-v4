@@ -4,7 +4,7 @@
 import React, {Component} from 'react'
 import {Layout } from 'antd'
 import SideBar from '../components/sideBar'
-import {Router, Route, Redirect} from 'react-router'
+import {Router, Route} from 'react-router'
 import createHashHistory from 'history/createHashHistory'
 
 import CustomTable from 'bundle-loader?lazy&name=customTable!../components/table'
@@ -13,13 +13,17 @@ import Bundle from '../components/lazyload'
 const Loading = function () {
     return <div>Loading...</div>
 }
-const createComponent = (component) =>() => (
-    <Bundle load={component}>
-        {
-            (Component) => Component?<Component />:<Loading/>
-        }
-    </Bundle>
-)
+const createComponent = (component) =>
+    () => {
+        let AsyncComponent = (
+            <Bundle load={component}>
+                {
+                    (Async) => Async?<Async />:<Loading/>
+                }
+            </Bundle>
+        )
+        return AsyncComponent
+    }
 
 
 export default class WholePage extends Component {
@@ -41,7 +45,6 @@ export default class WholePage extends Component {
                         <Content style={{background:'white'}} >
                             <Router history={this.history}>
                                 <div>
-                                    <Redirect from="/" to="/personalInfo" />
                                     <Route path="/personalInfo" component={createComponent(CustomTable)}/>
                                     <Route path="/chart" component={createComponent(CustomChart)}/>
                                 </div>

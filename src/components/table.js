@@ -2,7 +2,7 @@
  * Created by xiii on 2017/4/29.
  */
 import React, {Component} from 'react'
-import {Table, Card} from 'antd'
+import {Table} from 'antd'
 import Mock from 'mockjs'
 export default class CustomTable extends Component {
     constructor(args) {
@@ -60,7 +60,7 @@ export default class CustomTable extends Component {
                 title:'邮编',
                 dataIndex:'postcode',
                 width:200,
-                render:(value) => <a >{value}</a>
+                render:(value) => <a>{value}</a>
             },
             {
                 title:'简介',
@@ -68,11 +68,11 @@ export default class CustomTable extends Component {
             }
         ]
         return (
-        <div style={{margin:'20px 10px 10px'}}>
-            <Table rowKey={'contact'} dataSource={this.state.data} columns={columns}
-                   loading={this.state.loading}
-            />
-        </div>
+            <div style={{margin:'20px 10px 10px'}}>
+                <Table rowKey={'contact'} dataSource={this.state.data} columns={columns}
+                    loading={this.state.loading}
+                />
+            </div>
         )
     }
 }

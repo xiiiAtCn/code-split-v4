@@ -3,8 +3,6 @@
  */
 
 const path = require('path')
-
-const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
@@ -24,8 +22,8 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: ExtractTextPlugin.extract({
-                    fallback: "style-loader",
-                    use: "css-loader",
+                    fallback: 'style-loader',
+                    use: 'css-loader',
                     publicPath: path.resolve(context, 'dist')
                 })
             },
@@ -36,9 +34,9 @@ module.exports = {
                 use:[{
                     loader:'babel-loader',
                     options:{
-                        presets:['es2015', 'react', 'stage-1'],
+                        presets:['env', 'react', 'stage-0'],
                         plugins:[
-                            ['import', {libraryName: "antd", style: "css"}]
+                            ['import', {libraryName: 'antd', style: 'css'}]
                         ]
                     }
                 }]
@@ -55,7 +53,7 @@ module.exports = {
     resolve:{
         alias:{},
         modules: [
-            path.join(__dirname, "src"),"node_modules"
+            path.join(__dirname, 'src'),'node_modules'
         ]
     },
     externals:{
