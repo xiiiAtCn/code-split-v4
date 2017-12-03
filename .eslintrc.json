@@ -41,5 +41,8 @@
                 "skipUndeclared": true
             }
         ]
+    },
+    "globals": {
+        "__dirname": true
     }
 }
