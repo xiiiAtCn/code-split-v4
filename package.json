@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo welcome to my world!",
     "dev": "npm run open-browser && webpack-dev-server --config webpack/dev.js --host 0.0.0.0 --hot --inline --color --progress --watch",
-    "open-browser": "opener http://localhost:9000/dist/",
+    "open-browser": "opener http://localhost:9000/",
     "lint": "eslint src/"
   },
   "keywords": [
